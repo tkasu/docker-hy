@@ -1,0 +1,12 @@
+#!/bin/bash
+
+docker ps -a > ex_1-2_output_before
+docker stop snd_container
+docker rm fst_container
+docker rm snd_container
+docker rm trd_container
+docker ps -a > ex_1-2_output_after
+
+docker images >> ex_1-2_output_before
+docker rmi nginx
+docker images >> ex_1-2_output_after

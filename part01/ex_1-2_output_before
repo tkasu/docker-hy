@@ -1,0 +1,6 @@
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+88bf6fe72e9f        nginx               "nginx -g 'daemon of…"   18 minutes ago      Exited (0) 18 minutes ago                       trd_container
+ec028796b594        nginx               "nginx -g 'daemon of…"   18 minutes ago      Up 18 minutes               80/tcp              snd_container
+8a30bdf340c3        nginx               "nginx -g 'daemon of…"   18 minutes ago      Exited (0) 18 minutes ago                       fst_container
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+nginx               latest              53f3fd8007f7        2 weeks ago         109MB
