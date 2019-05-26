@@ -1,0 +1,11 @@
+#!/bin/bash
+
+docker run -d --name fst_container nginx
+docker run -d --name snd_container nginx
+docker run -d --name trd_container nginx
+
+docker stop fst_container
+docker stop trd_container
+
+docker ps -a > ex_1-1_output
+
