@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "basics" | docker run -i devopsdockeruh/pull_exercise > ex_1-3_output
