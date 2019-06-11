@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Before fix
+docker run --name searcher sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;' &> ex_1-5_output_before
+
+# Cleanup
+docker rm --force searcher
+
+# After fix
+docker run -dit --name searcher ubuntu:16.04
+docker exec searcher sh -c 'apt-get update > /dev/null  && apt-get -y install curl > /dev/null'
+docker exec -it searcher sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+
+# Cleanup
+docker rm --force searcher
