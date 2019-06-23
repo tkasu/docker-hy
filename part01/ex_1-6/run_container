@@ -1,0 +1,4 @@
+!/bin/bash
+
+docker build -t docker-clock .
+docker run --name docker-clock-inst docker-clock
