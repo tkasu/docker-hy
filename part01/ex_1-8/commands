@@ -1,0 +1,5 @@
+touch logs.txt
+docker run --name logikontti -v $(pwd)/logs.txt:/usr/app/logs.txt -d devopsdockeruh/first_volume_exercise sh -c 'touch logs.txt; node index;'
+sleep 16
+docker rm --force logikontti
+
