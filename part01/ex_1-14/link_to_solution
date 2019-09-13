@@ -1,0 +1,5 @@
+# Dockerized development verison can be found from:
+https://github.com/tkasu/rails-example-project/commit/9ef46a2f1748b9df5dc6f17255871fc8ecf75860
+
+# NOTE! I accidently started from ubuntu base image instead of ruby, hope that is fine
+# NOTE2! I needed to modify Gemfile's tzinfo-data to make the project work in dockerized Ubuntu
