@@ -1,0 +1,9 @@
+version: '3.5'
+
+services:
+  ports_ex:
+    image: devopsdockeruh/ports_exercise
+    ports:
+      - 80:80
+
+
