@@ -1,0 +1,18 @@
+version: '3.5'
+
+services:
+  redis-cache:
+    image: redis
+    container_name: cache
+  backend:
+    build: './backend'
+    ports:
+      - 8000:8000
+    volumes:
+      - ./logs.txt:/app/logs.txt
+    environment:
+      - REDIS=cache
+  frontend:
+    build: './frontend'
+    ports:
+      - 5000:5000
