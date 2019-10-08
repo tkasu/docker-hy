@@ -1,0 +1,42 @@
+version: '3.5'
+
+services:
+  redis-cache:
+    image: redis
+    container_name: cache
+  db:
+    image: postgres
+    restart: unless-stopped
+    volumes:
+      - ./database:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=testuser
+      - POSTGRES_PASSWORD=testpass
+    container_name: db_psql
+  backend:
+    build: './backend'
+    volumes:
+      - ./logs.txt:/app/logs.txt
+    environment:
+      - REDIS=cache
+      - DB_USERNAME=testuser
+      - DB_PASSWORD=testpass 
+      - DB_HOST=db_psql
+    container_name: bend
+    depends_on: 
+      - db
+  frontend:
+    build: './frontend'
+    container_name: fend
+  nginx:
+    image: jwilder/nginx-proxy 
+    volumes: 
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
+    container_name: rproxy
+    depends_on:
+      - frontend
+      - backend
+
