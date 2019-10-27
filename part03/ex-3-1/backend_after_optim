@@ -1,0 +1,11 @@
+IMAGE               CREATED              CREATED BY                                      SIZE                COMMENT
+b76b634bd841        About a minute ago   /bin/sh -c #(nop)  CMD ["/bin/sh" "-c" "npm …   0B                  
+7361b6fd2c9c        About a minute ago   /bin/sh -c #(nop)  EXPOSE 8000                  0B                  
+3a3a08bc0f3d        About a minute ago   /bin/sh -c apt-get update && apt-get -y     …   204MB               
+b159cba8f507        3 minutes ago        /bin/sh -c #(nop) WORKDIR /app                  0B                  
+cfc1a8241dcc        3 minutes ago        /bin/sh -c #(nop)  ENV FRONT_URL=http://loca…   0B                  
+2a697363a870        5 months ago         /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B                  
+<missing>           5 months ago         /bin/sh -c mkdir -p /run/systemd && echo 'do…   7B                  
+<missing>           5 months ago         /bin/sh -c rm -rf /var/lib/apt/lists/*          0B                  
+<missing>           5 months ago         /bin/sh -c set -xe   && echo '#!/bin/sh' > /…   745B                
+<missing>           5 months ago         /bin/sh -c #(nop) ADD file:a65e0467dbedc0992…   119MB               
