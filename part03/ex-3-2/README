@@ -1,0 +1,4 @@
+# Build dockerfile
+docker build -t yle-dl-dockerized .
+# Example usage (mounts current directory)
+docker run -v $(pwd):/app yle-dl-dockerized https://areena.yle.fi/1-50356660
